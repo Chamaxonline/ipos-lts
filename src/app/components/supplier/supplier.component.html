@@ -1,0 +1,85 @@
+<div class="main-card">
+    <div class="card-header px-0 pt-0">
+        <div class="d-flex justify-content-between align-items-center">
+            <h3>Suppliers</h3>
+            <input type="button" class="btn btn-success" value="Add+" (click)="showHideEditor()"/>
+        </div>
+    </div>
+    <div class="card-body without-footer">
+        <div class="row" *ngIf="isShowEditor">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label" for="code">Code</label>
+                        <input type="text" id="code" class="form-control" [(ngModel)]="supplier.code"
+                            placeholder="" name="code">    
+                    </div>
+                    <div class="col-8">
+                        <label class="form-label" for="name">Name</label>
+                        <input type="text" id="name" class="form-control" [(ngModel)]="supplier.name"
+                            placeholder="" name="name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label" for="code">WhatsApp</label>
+                        <input type="text" id="whatsapp" class="form-control" [(ngModel)]="supplier.whatsapp"
+                            placeholder="" name="cowhatsappde">    
+                    </div>
+                    <div class="col-8">
+                        <label class="form-label" for="Address">Address</label>
+                        <textarea  class="form-control"  [(ngModel)]="supplier.address"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label" for="code">Contact 1</label>
+                        <input type="text" id="contact1" class="form-control" [(ngModel)]="supplier.contact1"
+                            placeholder="" name="contact1">    
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label" for="code">Contact 2</label>
+                        <input type="text" id="contact2" class="form-control" [(ngModel)]="supplier.contact2"
+                            placeholder="" name="contact2">    
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label" for="code">Contact 3</label>
+                        <input type="text" id="contact3" class="form-control" [(ngModel)]="supplier.contact3"
+                            placeholder="" name="contact3">    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8"></div>
+                    <div class="col-4">
+                        <input type="submit" class="btn btn-warning" value="Cancel" (click)="cancel()"/>
+                        <input type="submit" class="btn btn-primary" value="Save" (click)="save()"/>
+                        <!-- <mean-loader [loading]="isSaving"></mean-loader>     -->
+                    </div>
+                </div> 
+            </div> 
+        </div>
+        <div class="row">
+            <!-- <mean-loader [loading]="isLoading"></mean-loader> -->
+            <table  class="table" *ngIf="!isLoading">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let supplier of suppliers">
+                        <td>{{supplier.code}}</td>
+                        <td>{{supplier.name}}</td>
+                        <td>
+                            <a href="javascript:;" (click)="edit(supplier)">Edit</a>
+                            <a href="javascript:;" (click)="delete(supplier)">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
