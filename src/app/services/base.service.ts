@@ -10,7 +10,6 @@ export class BaseService {
 
   protected getRequestHeaders(): { headers: HttpHeaders } {
     var headers = new HttpHeaders({
-      ClientSecret: '5fdba47152ea6117845f7f4e',
       'Content-Type': 'application/json',
     });
     return { headers: headers };

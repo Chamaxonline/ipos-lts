@@ -25,14 +25,14 @@ export class AppComponent {
   }
 
   setCurrentUser() {
-    let user: User;
-    const userValue = localStorage.getItem('user');
-    if (userValue && userValue != 'null') {
-      var decUser = this.cryptoService.decrypt(userValue);
-      user = JSON.parse(decUser);
-      this.accountService.setCurrentUser(user);
-    } else {
-      this.accountService.removeCurrentUser();
-    }
+    // let user: User;
+    // const userValue = localStorage.getItem('user');
+    // if (userValue && userValue != 'null') {
+    //   var decUser = this.cryptoService.decrypt(userValue);
+    //   user = JSON.parse(decUser);
+    //   this.accountService.setCurrentUser(user);
+    // } else {
+    //   this.accountService.removeCurrentUser();
+    // }
   }
 }

@@ -22,7 +22,7 @@ export class SupplierComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    //this.getAllSuppliers();
+    this.getAllSuppliers();
   }
 
   getAllSuppliers() {
