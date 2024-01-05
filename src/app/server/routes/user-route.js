@@ -1,4 +1,5 @@
 const User = require('../repo/user-repo')
+const base = require('./client-base-route')
 const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser')
@@ -10,15 +11,9 @@ router.get('/list', function (req, res) {
   .catch(err=> res.send(err));
 })
 
-// • Declaring POST method
 router.post('/', jsonParser, (req, res) => {
-  var reqbody = req.body;
-
-  User.findByIdAndUpdate(reqbody._id, reqbody, {new: true, upsert: true})
-  .then(result => 
-    res.json(result)
-    )
-  .catch( err=> res.send(err));
+    var reqbody = req.body;
+    res.json(base.post(reqbody._id, reqbody));
 })
 
 module.exports = router
