@@ -54,6 +54,7 @@ try {
   // specifying an URL path on first parameter '/api/example'.
   app.use('/api/example', require('./server/routes/example-route'))
   app.use('/api/client', require('./server/routes/client-route'))
+  app.use('/api/user', require('./server/routes/user-route'))
   app.use('/api/supplier', require('./server/routes/supplier-route'))
 
   // • Every other route that starts with `api/` but not declared above will
