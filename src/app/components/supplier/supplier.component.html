@@ -37,95 +37,58 @@
     </button>
   </div>
   <div>
-    <div class="row" *ngIf="isShowEditor">
-      <div class="col-md-4 mb-3">
-        <label class="form-label" for="code">Code</label>
-        <input
-          type="text"
-          id="code"
-          class="form-control"
-          [(ngModel)]="supplier.code"
-          placeholder=""
-          name="code"
-        />
+    <form [formGroup]="registerForm" (ngSubmit)="save()" autocomplete="off">
+      <div class="row" *ngIf="isShowEditor">
+        <div class="col-md-4">
+          <app-text-input
+            [label]="'Code'"
+            [formControl]="$any(registerForm.controls['code'])"
+          ></app-text-input>
+        </div>
+        <div class="col-md-4">
+          <app-text-input
+            [label]="'Name'"
+            [formControl]="$any(registerForm.controls['name'])"
+          ></app-text-input>
+        </div>
+        <div class="col-md-4">
+          <app-text-input
+            [label]="'WhatsApp'"
+            [formControl]="$any(registerForm.controls['whatsapp'])"
+          ></app-text-input>
+        </div>
+        <div class="col-md-4">
+          <app-text-input
+            [label]="'Contact 1'"
+            [formControl]="$any(registerForm.controls['contact1'])"
+          ></app-text-input>
+        </div>
+        <div class="col-md-4">
+          <app-text-input
+            [label]="'Contact 2'"
+            [formControl]="$any(registerForm.controls['contact2'])"
+          ></app-text-input>
+        </div>
+        <div class="col-md-4">
+          <app-text-input
+            [label]="'Contact 3'"
+            [formControl]="$any(registerForm.controls['contact3'])"
+          ></app-text-input>
+        </div>
+        <div class="col-md-12">
+          <app-text-area-input
+            [label]="'Address'"
+            [formControl]="$any(registerForm.controls['address'])"
+          ></app-text-area-input>
+        </div>
+        <div class="col-md-12 d-flex justify-content-end" style="gap: 12px">
+          <button class="btn btn-warning" type="button" (click)="cancel()">
+            Cancel
+          </button>
+          <button class="btn btn-primary" type="submit">Save</button>
+        </div>
       </div>
-      <div class="col-md-4 mb-3">
-        <label class="form-label" for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          class="form-control"
-          [(ngModel)]="supplier.name"
-          placeholder=""
-          name="name"
-        />
-      </div>
-      <div class="col-md-4 mb-3">
-        <label class="form-label" for="code">WhatsApp</label>
-        <input
-          type="text"
-          id="whatsapp"
-          class="form-control"
-          [(ngModel)]="supplier.whatsapp"
-          placeholder=""
-          name="cowhatsappde"
-        />
-      </div>
-      <div class="col-md-4 mb-3">
-        <label class="form-label" for="code">Contact 1</label>
-        <input
-          type="text"
-          id="contact1"
-          class="form-control"
-          [(ngModel)]="supplier.contact1"
-          placeholder=""
-          name="contact1"
-        />
-      </div>
-      <div class="col-md-4 mb-3">
-        <label class="form-label" for="code">Contact 2</label>
-        <input
-          type="text"
-          id="contact2"
-          class="form-control"
-          [(ngModel)]="supplier.contact2"
-          placeholder=""
-          name="contact2"
-        />
-      </div>
-      <div class="col-md-4 mb-3">
-        <label class="form-label" for="code">Contact 3</label>
-        <input
-          type="text"
-          id="contact3"
-          class="form-control"
-          [(ngModel)]="supplier.contact3"
-          placeholder=""
-          name="contact3"
-        />
-      </div>
-      <div class="col-md-12 mb-3">
-        <label class="form-label" for="Address">Address</label>
-        <textarea
-          class="form-control"
-          [(ngModel)]="supplier.address"
-        ></textarea>
-      </div>
-      <div class="col-md-12 d-flex justify-content-end" style="gap: 12px;">
-        <input
-          type="submit"
-          class="btn btn-warning"
-          value="Cancel"
-          (click)="cancel()"
-        />
-        <input
-          type="submit"
-          class="btn btn-primary"
-          value="Save"
-          (click)="save()"
-        />
-      </div>
-    </div>
+    </form>
   </div>
   <div class="card-body without-footer">
     <div class="row">
