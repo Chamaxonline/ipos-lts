@@ -1,6 +1,8 @@
 const Supplier = require('../repo/supplier-repo')
 const express = require('express')
 const router = express.Router()
+const bodyParser = require('body-parser')
+var jsonParser = bodyParser.json()
 
 // • Declaring GET method
 router.get('/list', function (req, res) {
@@ -13,24 +15,18 @@ router.get('/list', function (req, res) {
   .catch(err=> res.send(err));
 })
 
-
-
 // • Declaring POST method
-router.post('/', function (req, res) {
+router.post('/', jsonParser, (req, res) => {
   // • Create and save `supplier` on MongoDB.
   // • We get information form request body
-  Supplier.create({
-    title: req.body.title,
-    content: req.body.content
-  }, function (err, suppliers) {
-    if (err) { res.send(err) }
 
-    // • Get and return all the `suppliers` after you create another
-    Supplier.find(function (err, suppliers) {
-      if (err) { res.send(err) }
-      res.json(suppliers)
-    })
-  })
+  var reqbody = req.body;
+
+  Supplier.findByIdAndUpdate(reqbody._id, reqbody, {new: true, upsert: true})
+  .then(result => 
+    res.json(result)
+    )
+  .catch( err=> res.send(err));
 })
 
 // • Export router to use it on other modules

@@ -39,7 +39,7 @@ export class SupplierComponent implements OnInit {
 
   ngOnInit(): void {
     this.initializeForm();
-    //this.getAllSuppliers();
+    this.getAllSuppliers();
   }
 
   initializeForm() {

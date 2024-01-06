@@ -12,10 +12,10 @@ export class SupplierService extends BaseService {
   }
 
   all() {
-    return this.get<supplier[]>(`/api/suppliers`);
+    return this.get<supplier[]>(`http://localhost:3000/api/supplier/list`);
   }
 
   save(supplier: supplier) {
-    return this.post<supplier>(`/api/supplier`, supplier);
+    return this.post<supplier>(`http://localhost:3000/api/supplier`, supplier);
   }
 }

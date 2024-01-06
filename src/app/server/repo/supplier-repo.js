@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 // • Create Schema. This will be used later to define model fields (db columns)
 const SupplierSchema = new Schema({
-    tenant: {
+    client: {
         _id: mongoose.Schema.Types.ObjectId,
     },
     code: String,
