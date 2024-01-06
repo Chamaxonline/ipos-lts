@@ -1,17 +1,22 @@
 import { NgIf } from '@angular/common';
 import { Component, Input, Self } from '@angular/core';
-import { ControlValueAccessor, FormControl, FormsModule, NgControl, ReactiveFormsModule } from '@angular/forms';
+import {
+  ControlValueAccessor,
+  FormControl,
+  FormsModule,
+  NgControl,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 @Component({
-  selector: 'app-text-input',
+  selector: 'app-text-area-input',
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule, NgIf],
-  templateUrl: './text-input.component.html',
+  templateUrl: './text-area-input.component.html',
   styles: ``,
 })
-export class TextInputComponent implements ControlValueAccessor {
+export class TextAreaInputComponent implements ControlValueAccessor {
   @Input() label!: string;
-  @Input() type = 'text';
 
   constructor(@Self() public ngControl: NgControl) {
     this.ngControl.valueAccessor = this;
@@ -24,6 +29,6 @@ export class TextInputComponent implements ControlValueAccessor {
   registerOnTouched(fn: any): void {}
 
   get control(): FormControl {
-    return this.ngControl.control as FormControl
+    return this.ngControl.control as FormControl;
   }
 }
