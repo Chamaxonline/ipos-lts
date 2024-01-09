@@ -11,7 +11,7 @@ export class RouteConstants {
   public static StockTakingRoute: string = 'stockTaking';
   public static ItemMasterRoute: string = 'item';
   public static ItemTypesRoute: string = 'itemType';
-  public static CutomerRoute: string = 'customer';
+  public static CustomerRoute: string = 'customer';
   public static SupplierMasterRoute: string = 'supplier';
   public static DailySalesRoute: string = 'reports/dailySales';
   public static TimeWiseSalesRoute: string = 'reports/timeWiseSales';

@@ -57,7 +57,7 @@ export class CommonService extends BaseService {
     return this.get<customer>(`/api/customer?id=${id}`);
   }
 
-  customers(searchText: string | undefined) {
+  customers(searchText?: string | undefined) {
     return this.get<customer[]>(`/api/customers?searchText=${searchText}`);
   }
 
