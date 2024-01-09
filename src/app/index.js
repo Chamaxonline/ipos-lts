@@ -56,6 +56,8 @@ try {
   app.use('/api/client', require('./server/routes/client-route'))
   app.use('/api/user', require('./server/routes/user-route'))
   app.use('/api/supplier', require('./server/routes/supplier-route'))
+  app.use('/api/itemcategory', require('./server/routes/item-category-route'))
+  app.use('/api/cashiersigninoff', require('./server/routes/cashier-sign-in-off-route'))
 
   // • Every other route that starts with `api/` but not declared above will
   // return `not-found` status. Apply your `not-found` format here.
