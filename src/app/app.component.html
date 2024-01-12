@@ -3,12 +3,14 @@
     <!-- <mean-side-nav
       *ngIf="(accountService.currentUser$ | async) != null"
     ></mean-side-nav> -->
-    <div
-      [ngClass]="{
-        'content-container': (accountService.currentUser$ | async) != null
-      }"
-    >
-      <router-outlet></router-outlet>
-    </div>
+    <app-side-nav [title]="title">
+      <div
+        [ngClass]="{
+          'content-container': (accountService.currentUser$ | async) != null
+        }"
+      >
+        <router-outlet></router-outlet>
+      </div>
+    </app-side-nav>
   </div>
 </main>

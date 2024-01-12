@@ -1,0 +1,515 @@
+<div>
+  <div
+    id="iposNav"
+    class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark dashboard-nav"
+  >
+    <a
+      href="/"
+      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-shop me-2"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"
+        />
+      </svg>
+      <span class="fs-4">IPOS</span>
+    </a>
+    <hr />
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          class="nav-link text-white"
+        >
+          <i class="bi bi-house-door me-2"></i>
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/dashboard"
+          routerLinkActive="active"
+          class="nav-link text-white"
+        >
+          <i class="bi bi-speedometer2 me-2"></i>
+          Dashboard
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          href="#"
+          class="nav-link text-white list d-flex justify-content-between align-items-center"
+          data-bs-toggle="collapse"
+          data-bs-target="#invoice-collapse"
+          aria-expanded="false"
+        >
+          <span><i class="bi bi-receipt-cutoff me-2"></i> Invoice</span>
+        </a>
+        <div class="collapse" id="invoice-collapse">
+          <ul class="list-unstyled nav-pills">
+            <li><a href="#" class="nav-link text-white">Invoice</a></li>
+            <li>
+              <a href="#" class="nav-link text-white">Wholesale Invoice</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a
+          href="#"
+          class="nav-link text-white list d-flex justify-content-between align-items-center"
+          data-bs-toggle="collapse"
+          data-bs-target="#grn-collapse"
+          aria-expanded="false"
+        >
+          <span><i class="bi bi-journals me-2"></i> GRN</span>
+        </a>
+        <div class="collapse" id="grn-collapse">
+          <ul class="list-unstyled nav-pills">
+            <li><a href="#" class="nav-link text-white">GRN</a></li>
+            <li><a href="#" class="nav-link text-white">GRN Order</a></li>
+            <li><a href="#" class="nav-link text-white">Cash Handler</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a
+          href="#"
+          class="nav-link text-white list d-flex justify-content-between align-items-center"
+          data-bs-toggle="collapse"
+          data-bs-target="#item-collapse"
+          aria-expanded="false"
+        >
+          <span><i class="bi bi-cart-check me-2"></i> Item</span>
+        </a>
+        <div class="collapse" id="item-collapse">
+          <ul class="list-unstyled nav-pills">
+            <li><a href="#" class="nav-link text-white">Item Master</a></li>
+            <li><a href="#" class="nav-link text-white">Item Types</a></li>
+            <li><a href="#" class="nav-link text-white">Cash Handler</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a
+          routerLink="/dashboard"
+          routerLinkActive="active"
+          class="nav-link text-white"
+        >
+          <i class="bi bi-wallet2 me-2"></i>
+          Expenses
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/dashboard"
+          routerLinkActive="active"
+          class="nav-link text-white"
+        >
+          <i class="bi bi-box-seam me-2"></i>
+          Stock Taking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/customer"
+          routerLinkActive="active"
+          class="nav-link text-white"
+        >
+          <i class="bi bi-person-vcard me-2"></i>
+          Customer
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/supplier"
+          routerLinkActive="active"
+          class="nav-link text-white"
+        >
+          <i class="bi bi-person-workspace me-2"></i>
+          Supplier Master
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          href="#"
+          class="nav-link text-white list d-flex justify-content-between align-items-center"
+          data-bs-toggle="collapse"
+          data-bs-target="#other-collapse"
+          aria-expanded="false"
+        >
+          <span><i class="bi bi-bar-chart-steps me-2"></i> Others</span>
+        </a>
+        <div class="collapse" id="other-collapse">
+          <ul class="list-unstyled nav-pills">
+            <li><a href="#" class="nav-link text-white">Sales Detail</a></li>
+            <li><a href="#" class="nav-link text-white">Time Wise Sales</a></li>
+            <li><a href="#" class="nav-link text-white">Sales Detail</a></li>
+            <li><a href="#" class="nav-link text-white">Item wise sales</a></li>
+            <li><a href="#" class="nav-link text-white">Monthly Summary</a></li>
+            <li><a href="#" class="nav-link text-white">Comments</a></li>
+            <li><a href="#" class="nav-link text-white">Item Moving</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <hr />
+    <div class="dropdown">
+      <a
+        href="#"
+        class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+        id="dropdownUser1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img
+          src="https://github.com/mdo.png"
+          alt=""
+          width="32"
+          height="32"
+          class="rounded-circle me-2"
+        />
+        <strong>mdo</strong>
+      </a>
+      <ul
+        class="dropdown-menu dropdown-menu-dark text-small shadow"
+        aria-labelledby="dropdownUser1"
+      >
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="dashboard-app">
+    <header class="dashboard-toolbar">
+      <div class="d-flex align-items-center" style="gap: 12px">
+        <button type="button" class="btn btn-secondary" (click)="openNavbar()">
+          <i class="bi bi-list"></i>
+        </button>
+        <h3 class="mb-0">{{ title }}</h3>
+      </div>
+    </header>
+    <div class="dashboard-content">
+      <div class="container">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="dashboard">
+  <div class="dashboard-nav">
+    <header>
+      <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a
+      ><a href="#" class="brand-logo"
+        ><i class="fas fa-anchor"></i> <span>BRAND</span></a
+      >
+    </header>
+    <nav class="dashboard-nav-list">
+      <a href="#" class="dashboard-nav-item"
+        ><i class="fas fa-home"></i> Home </a
+      ><a href="#" class="dashboard-nav-item active"
+        ><i class="fas fa-tachometer-alt"></i> dashboard </a
+      ><a href="#" class="dashboard-nav-item"
+        ><i class="fas fa-file-upload"></i> Upload
+      </a>
+      <div class="dashboard-nav-dropdown">
+        <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"
+          ><i class="fas fa-photo-video"></i> Media
+        </a>
+        <div class="dashboard-nav-dropdown-menu">
+          <a href="#" class="dashboard-nav-dropdown-item">All</a
+          ><a href="#" class="dashboard-nav-dropdown-item">Recent</a
+          ><a href="#" class="dashboard-nav-dropdown-item">Images</a
+          ><a href="#" class="dashboard-nav-dropdown-item">Video</a>
+        </div>
+      </div>
+      <div class="dashboard-nav-dropdown">
+        <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"
+          ><i class="fas fa-users"></i> Users
+        </a>
+        <div class="dashboard-nav-dropdown-menu">
+          <a href="#" class="dashboard-nav-dropdown-item">All</a
+          ><a href="#" class="dashboard-nav-dropdown-item">Subscribed</a
+          ><a href="#" class="dashboard-nav-dropdown-item">Non-subscribed</a
+          ><a href="#" class="dashboard-nav-dropdown-item">Banned</a
+          ><a href="#" class="dashboard-nav-dropdown-item">New</a>
+        </div>
+      </div>
+      <div class="dashboard-nav-dropdown">
+        <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"
+          ><i class="fas fa-money-check-alt"></i> Payments
+        </a>
+        <div class="dashboard-nav-dropdown-menu">
+          <a href="#" class="dashboard-nav-dropdown-item">All</a
+          ><a href="#" class="dashboard-nav-dropdown-item">Recent</a
+          ><a href="#" class="dashboard-nav-dropdown-item"> Projections</a>
+        </div>
+      </div>
+      <a href="#" class="dashboard-nav-item"
+        ><i class="fas fa-cogs"></i> Settings </a
+      ><a href="#" class="dashboard-nav-item"
+        ><i class="fas fa-user"></i> Profile
+      </a>
+      <div class="nav-item-divider"></div>
+      <a href="#" class="dashboard-nav-item"
+        ><i class="fas fa-sign-out-alt"></i> Logout
+      </a>
+    </nav>
+  </div>
+  <div class="dashboard-app">
+    <div class="dashboard-toolbar">
+      <a href="#!" class="menu-toggle"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          /></svg>
+        </a>
+        <p>{{title}}</p>
+    </div>
+    <div class="dashboard-content">
+      <div class="container">// child</div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div
+  class="menu-container"
+  [class]="{
+    collapseActive: showCollapseMenu,
+    collapseDeactive: !showCollapseMenu
+  }"
+>
+  <div class="main-container">
+    <div class="logo-wrapper" (click)="menuClickEvent(0)">
+      <img src="/assets/images/logo.jpg" />
+    </div>
+    <div class="menu-scroller">
+      <ul class="main-menu">
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(1)"
+            [class]="{ selected: selectedMenu == 1 }"
+          >
+            <span class="menu-icn ca ca-icn-dashboard"></span>
+            <span class="menu-title">Invoice</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(2)"
+            [class]="{ selected: selectedMenu == 2 }"
+          >
+            <span class="menu-icn ca ca-icn-booking"></span>
+            <span class="menu-title">Wholesale Invoice</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(3)"
+            [class]="{ selected: selectedMenu == 3 }"
+          >
+            <span class="menu-icn ca ca-icn-flight-schedule"></span>
+            <span class="menu-title">GRN</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(4)"
+            [class]="{ selected: selectedMenu == 4 }"
+          >
+            <span class="menu-icn ca ca-icn-dollar"></span>
+            <span class="menu-title">GRN Order</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(5)"
+            [class]="{ selected: selectedMenu == 5 }"
+          >
+            <span class="menu-icn ca ca-icn-awb"></span>
+            <span class="menu-title">Cash Handler</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(6)"
+            [class]="{ selected: selectedMenu == 6 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Expences</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(7)"
+            [class]="{ selected: selectedMenu == 7 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Stock Taking</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(8)"
+            [class]="{ selected: selectedMenu == 8 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Item Master</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(9)"
+            [class]="{ selected: selectedMenu == 9 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Item types</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(10)"
+            [class]="{ selected: selectedMenu == 10 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Cutomer</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(11)"
+            [class]="{ selected: selectedMenu == 11 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Supplier Master</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(12)"
+            [class]="{ selected: selectedMenu == 12 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Daily Sales</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(13)"
+            [class]="{ selected: selectedMenu == 13 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Time Wise Sales</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(14)"
+            [class]="{ selected: selectedMenu == 14 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Sales Detail</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(15)"
+            [class]="{ selected: selectedMenu == 15 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Item wise sales</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(16)"
+            [class]="{ selected: selectedMenu == 16 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Monthly Summary</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(17)"
+            [class]="{ selected: selectedMenu == 17 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Comments</span>
+          </div>
+        </li>
+        <li>
+          <div
+            class="menu-item"
+            (click)="menuClickEvent(18)"
+            [class]="{ selected: selectedMenu == 18 }"
+          >
+            <span class="menu-icn ca ca-icn-bell"></span>
+            <span class="menu-title">Item Moving</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div class="profile-card">
+      <div class="pro-pic">
+        <div class="pro-img"><img src="/assets/images/profile-img.png" /></div>
+      </div>
+      <label>{{ currentUser?.name }}</label>
+      <label>{{ currentUser?.email }}</label>
+      <div class="actions">
+        <span
+          class="ca ca-icn-settings"
+          title="Settings"
+          (click)="settings()"
+        ></span>
+        <span class="ca ca-icn-edit" title="Edit" (click)="edit()"></span>
+        <span
+          class="ca ca-icn-shutdown"
+          title="Sign Out"
+          (click)="signOut()"
+        ></span>
+      </div>
+    </div>
+  </div>
+</div> -->
