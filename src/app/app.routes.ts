@@ -4,6 +4,14 @@ import { SupplierComponent } from './components/supplier/supplier.component';
 import { CustomerComponent } from './components/customer/customer.component';
 
 export const routes: Routes = [
-  { path: RouteConstants.SupplierMasterRoute, component: SupplierComponent },
-  { path: RouteConstants.CustomerRoute, component: CustomerComponent },
+  {
+    path: RouteConstants.SupplierMasterRoute,
+    component: SupplierComponent,
+    title: 'Supplier',
+  },
+  {
+    path: RouteConstants.CustomerRoute,
+    component: CustomerComponent,
+    title: 'Customer',
+  },
 ];

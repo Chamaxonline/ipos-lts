@@ -7,7 +7,7 @@ export class RouteConstants {
   public static GRNRoute: string = 'grn';
   public static GRNOrderRoute: string = 'grnOrder';
   public static CashHandlerRoute: string = 'cash';
-  public static ExpencesRoute: string = 'expences';
+  public static ExpensesRoute: string = 'expenses';
   public static StockTakingRoute: string = 'stockTaking';
   public static ItemMasterRoute: string = 'item';
   public static ItemTypesRoute: string = 'itemType';
