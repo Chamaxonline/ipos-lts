@@ -20,4 +20,8 @@ export class RouteConstants {
   public static MonthlySummaryRoute: string = 'reports/monthlySummary';
   public static CommentsRoute: string = 'reports/comments';
   public static ItemMovingRoute: string = 'reports/itemMoving';
+  public static HomeRoute: string = 'home';
+  public static DashboardRoute: string = 'dashboard';
+  public static NotFoundRoute: string = 'not-found';
+  public static ServerErrorRoute: string = 'server-error';
 }
