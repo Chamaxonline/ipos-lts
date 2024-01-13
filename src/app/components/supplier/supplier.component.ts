@@ -66,7 +66,8 @@ export class SupplierComponent implements OnInit {
   save() {
     if (this.registerForm.valid) {
       this.isSaving = true;
-      this.supplierService.save(this.supplier).subscribe((res) => {
+      this.supplierService.save(this.registerForm.value).subscribe((res) => {
+        this.registerForm.reset();
         this.supplier = new supplier();
         this.isSaving = false;
         this.isShowEditor = false;

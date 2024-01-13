@@ -61,8 +61,9 @@ export class CustomerComponent implements OnInit {
 
   save() {
     if (this.registerForm.valid) {
-      this.commonService.saveCustomer(this.customer).subscribe((res) => {
+      this.commonService.saveCustomer(this.registerForm.value).subscribe((res) => {
         this.customer = new customer();
+        this.registerForm.reset();
         //this.isSaving = false;
         // this.isShowEditor = false;
         //this.messageService.saveSuccess();

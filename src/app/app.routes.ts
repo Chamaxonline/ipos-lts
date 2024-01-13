@@ -22,7 +22,7 @@ export const routes: Routes = [
   {
     path: RouteConstants.ItemMasterRoute,
     component: ItemComponent,
-    title: 'Item',
+    title: 'Item - Master',
   },
   {
     path: RouteConstants.HomeRoute,
