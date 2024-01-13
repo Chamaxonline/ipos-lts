@@ -49,8 +49,8 @@ export class CustomerComponent implements OnInit {
       address: ['', Validators.required],
       email: [''],
       comment: [''],
-      totalBillValue: [0],
-      totalOutstanding: [0],
+      totalBillValue: [null],
+      totalOutstanding: [null],
       isAllowedPrintName: [false],
     });
   }

@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NotFoundComponent } from './components/errors/not-found/not-found.component';
 import { ServerErrorComponent } from './components/errors/server-error/server-error.component';
+import { ItemComponent } from './components/item/item.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,11 @@ export const routes: Routes = [
     path: RouteConstants.CustomerRoute,
     component: CustomerComponent,
     title: 'Customer',
+  },
+  {
+    path: RouteConstants.ItemMasterRoute,
+    component: ItemComponent,
+    title: 'Item',
   },
   {
     path: RouteConstants.HomeRoute,

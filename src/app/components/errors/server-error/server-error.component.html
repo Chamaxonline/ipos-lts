@@ -1,1 +1,25 @@
-<p>server-error works!</p>
+<div class="p3">
+  <div class="callout-info">
+    Internal server error - refreshing the page will make the error disappear!
+  </div>
+  <div class="bd-content ps-lg-4 bg-light py-2">
+    <ng-container *ngIf="error">
+      <h5 class="text-danger">Error: {{ error.message }}</h5>
+      <p class="font-weight-bold">
+        Note: If you are seeing this then Angular is probably not to blame
+      </p>
+      <p>What to do next?</p>
+      <ol>
+        <li>Check your internat connection</li>
+        <li>Contact IPOS customer care</li>
+      </ol>
+      <p>
+        Following is the stack track - this is where your investigation should
+        start!
+      </p>
+      <code class="mt-5" style="background-color: whitesmoke">{{
+        error.details
+      }}</code>
+    </ng-container>
+  </div>
+</div>
