@@ -93,9 +93,14 @@
         </a>
         <div class="collapse" id="item-collapse">
           <ul class="list-unstyled nav-pills">
-            <li><a routerLink="/item" class="nav-link text-white">Item Master</a></li>
-            <li><a href="#" class="nav-link text-white">Item Types</a></li>
-            <li><a href="#" class="nav-link text-white">Cash Handler</a></li>
+            <li>
+              <a routerLink="/item" class="nav-link text-white">Item Master</a>
+            </li>
+            <li>
+              <a routerLink="/itemType" class="nav-link text-white"
+                >Item Types</a
+              >
+            </li>
           </ul>
         </div>
       </li>
@@ -196,7 +201,11 @@
   <div class="dashboard-app">
     <header class="dashboard-toolbar">
       <div class="d-flex align-items-center" style="gap: 12px">
-        <button type="button" class="btn btn-secondary" (click)="openNavbar()">
+        <button
+          type="button"
+          class="btn btn-secondary btn-side"
+          (click)="openNavbar()"
+        >
           <i class="bi bi-list"></i>
         </button>
         <h3 class="mb-0">{{ title }}</h3>
