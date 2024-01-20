@@ -8,6 +8,7 @@ import { NotFoundComponent } from './components/errors/not-found/not-found.compo
 import { ServerErrorComponent } from './components/errors/server-error/server-error.component';
 import { ItemComponent } from './components/item/item.component';
 import { ItemTypeComponent } from './components/item-type/item-type.component';
+import { StockTakingComponent } from './components/stock-taking/stock-taking.component';
 
 export const routes: Routes = [
   {
@@ -29,6 +30,11 @@ export const routes: Routes = [
     path: RouteConstants.ItemTypesRoute,
     component: ItemTypeComponent,
     title: 'Item Type',
+  },
+  {
+    path: RouteConstants.StockTakingRoute,
+    component: StockTakingComponent,
+    title: 'Stock Taking',
   },
   {
     path: RouteConstants.HomeRoute,
