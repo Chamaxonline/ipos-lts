@@ -83,53 +83,53 @@
               </ng-container>
             </div>
           </div>
-        </div>
-        <div
-          class="col-md-12 mb-3"
-          *ngFor="let subtype of getChildNodes(type._id)"
-        >
-          <div class="d-flex" style="gap: 8px">
-            <button
-              class="btn btn-primary"
-              (click)="setSelectedEditor(subtype._id)"
-              *ngIf="editingTypeId !== type._id"
-            >
-              <i class="bi bi-plus-circle"></i>
-            </button>
-            <span>{{ subtype.name }}</span>
-          </div>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <ng-container *ngIf="editingTypeId == subtype._id">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    id="name"
-                    class="form-control"
-                    [(ngModel)]="editingItemName"
-                    placeholder="Name"
-                    name="name"
-                  />
-                  <button
-                    class="btn btn-primary mr-1"
-                    (click)="save(editingItemName, subtype._id)"
-                  >
-                    Save
-                  </button>
-                  <button class="btn btn-secondary" (click)="hideAdd()">
-                    Cancel
-                  </button>
-                </div>
-              </ng-container>
+          <div
+            class="col-md-12 mb-3"
+            *ngFor="let subtype of getChildNodes(type._id)"
+          >
+            <div class="d-flex" style="gap: 8px">
+              <button
+                class="btn btn-primary"
+                (click)="setSelectedEditor(subtype._id)"
+                *ngIf="editingTypeId !== type._id"
+              >
+                <i class="bi bi-plus-circle"></i>
+              </button>
+              <span>{{ subtype.name }}</span>
             </div>
-          </div>
-        </div>
-        <div
-          class="col-md-12 mb-3"
-          *ngFor="let subtype2 of getChildNodes(subtype._id)"
-        >
-          <div class="d-flex" style="gap: 8px">
-            <span>{{ subtype2.name }}</span>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <ng-container *ngIf="editingTypeId == subtype._id">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-control"
+                      [(ngModel)]="editingItemName"
+                      placeholder="Name"
+                      name="name"
+                    />
+                    <button
+                      class="btn btn-primary mr-1"
+                      (click)="save(editingItemName, subtype._id)"
+                    >
+                      Save
+                    </button>
+                    <button class="btn btn-secondary" (click)="hideAdd()">
+                      Cancel
+                    </button>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+            <div
+              class="col-md-12 mb-3"
+              *ngFor="let subtype2 of getChildNodes(subtype._id)"
+            >
+              <div class="d-flex" style="gap: 8px">
+                <span>{{ subtype2.name }}</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
